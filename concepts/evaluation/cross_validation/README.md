@@ -81,13 +81,13 @@ Final Score = Average of all 5 validation scores
 
 ## When to Use
 
-✅ **Use Cross-Validation:**
+**Use Cross-Validation:**
 - Model selection (comparing different algorithms)
 - Hyperparameter tuning
 - Getting reliable performance estimates
 - Small datasets (maximize data usage)
 
-❌ **Don't Use:**
+**Don't Use:**
 - Final model evaluation (use held-out test set)
 - Time series (use time-based splits)
 - When computation is extremely limited
@@ -117,33 +117,10 @@ Final Score = Average of all 5 validation scores
 - Can be slow for large datasets
 - Doesn't eliminate need for test set
 
-## Code Example (Conceptual)
-
-```python
-from sklearn.model_selection import cross_val_score, KFold
-
-# K-Fold Cross-Validation
-kfold = KFold(n_splits=5, shuffle=True, random_state=42)
-scores = cross_val_score(model, X_train, y_train, cv=kfold, scoring='accuracy')
-
-print(f"CV Scores: {scores}")
-print(f"Mean CV Score: {scores.mean():.4f}")
-print(f"Std CV Score: {scores.std():.4f}")
-
-# Stratified K-Fold (for classification)
-from sklearn.model_selection import StratifiedKFold
-skfold = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
-```
-
 ## Best Practices
 
 1. **Always use stratified CV for classification** with imbalanced classes
-2. **Use separate test set** for final evaluation (don't use CV on test set)
+2. **Use separate test set** for final evaluation 
 3. **Shuffle data** unless it's time series
 4. **Report mean and std** of CV scores
 5. **Use appropriate k**: 5-10 folds is usually sufficient
-
-## References
-
-- Scikit-learn: cross_val_score, KFold, StratifiedKFold
-- Model evaluation best practices
