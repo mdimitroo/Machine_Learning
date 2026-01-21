@@ -142,25 +142,6 @@ Where:
 - **Spam Detection**: High precision (don't mark good emails as spam)
 - **Fraud Detection**: High precision (minimize false alarms)
 
-## Code Example (Conceptual)
-
-```python
-from sklearn.metrics import (
-    accuracy_score, precision_score, recall_score,
-    f1_score, confusion_matrix, roc_auc_score
-)
-
-# Calculate metrics
-accuracy = accuracy_score(y_true, y_pred)
-precision = precision_score(y_true, y_pred)
-recall = recall_score(y_true, y_pred)
-f1 = f1_score(y_true, y_pred)
-cm = confusion_matrix(y_true, y_pred)
-
-# For probabilities
-auc = roc_auc_score(y_true, y_proba)
-```
-
 ## Best Practices
 
 1. **Use multiple metrics**: No single metric tells the whole story
@@ -178,8 +159,3 @@ auc = roc_auc_score(y_true, y_proba)
 | Recall | TP/(TP+FN) | Minimize false negatives | 0-1 |
 | F1-Score | 2PR/(P+R) | Balance precision/recall | 0-1 |
 | AUC-ROC | Area under ROC | Model comparison | 0-1 |
-
-## References
-
-- Scikit-learn metrics documentation
-- Understanding classification metrics
