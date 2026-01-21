@@ -144,27 +144,6 @@ Where:
 - Business context requires relative error
 - Target values are always positive
 
-## Code Example (Conceptual)
-
-```python
-from sklearn.metrics import (
-    mean_squared_error, mean_absolute_error,
-    r2_score, mean_absolute_percentage_error
-)
-
-# Calculate metrics
-mse = mean_squared_error(y_true, y_pred)
-rmse = np.sqrt(mse)
-mae = mean_absolute_error(y_true, y_pred)
-r2 = r2_score(y_true, y_pred)
-mape = mean_absolute_percentage_error(y_true, y_pred)
-
-print(f"MSE: {mse:.4f}")
-print(f"RMSE: {rmse:.4f}")
-print(f"MAE: {mae:.4f}")
-print(f"R²: {r2:.4f}")
-print(f"MAPE: {mape:.2f}%")
-```
 
 ## Visualizing Regression Performance
 
@@ -197,10 +176,3 @@ print(f"MAPE: {mape:.2f}%")
 - **MAE**: Robust, treats all errors equally
 - **R²**: Explained variance, model comparison
 - **MAPE**: Percentage error, scale-independent
-
-Choose based on your specific needs and problem characteristics.
-
-## References
-
-- Scikit-learn regression metrics
-- Understanding regression evaluation
