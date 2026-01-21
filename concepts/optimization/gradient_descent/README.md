@@ -105,39 +105,15 @@ Where `β` is momentum coefficient (typically 0.9)
 - Faster convergence
 - Helps escape local minima and saddle points
 
-## Code Example (Conceptual)
-
-```python
-# Simple gradient descent
-def gradient_descent(X, y, learning_rate=0.01, iterations=1000):
-    m = len(y)
-    theta = np.zeros(X.shape[1])
-    
-    for i in range(iterations):
-        # Calculate gradient
-        predictions = X @ theta
-        errors = predictions - y
-        gradient = (1/m) * X.T @ errors
-        
-        # Update parameters
-        theta = theta - learning_rate * gradient
-        
-        # Optional: Check convergence
-        if np.linalg.norm(gradient) < 1e-6:
-            break
-    
-    return theta
-```
-
 ## When to Use
 
-✅ **Use Gradient Descent:**
+**Use Gradient Descent:**
 - Training neural networks
 - Linear/logistic regression
 - Any differentiable cost function
 - Large-scale optimization problems
 
-❌ **Alternatives:**
+**Alternatives:**
 - **Normal equations**: For linear regression (closed-form solution)
 - **Newton's method**: When you can compute Hessian (faster but expensive)
 
@@ -148,8 +124,3 @@ def gradient_descent(X, y, learning_rate=0.01, iterations=1000):
 3. **Use mini-batches**: Balance between speed and stability
 4. **Monitor convergence**: Plot cost function over iterations
 5. **Use momentum**: Especially for non-convex problems
-
-## References
-
-- Optimization in machine learning
-- Gradient descent variants and improvements
