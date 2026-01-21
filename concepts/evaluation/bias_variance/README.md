@@ -40,28 +40,6 @@ As model complexity increases:
 
 ![Bias-Variance Tradeoff](images/bias_variance_tradeoff.png)
 
-*Figure: Visual representation of the bias-variance tradeoff showing how total error, bias, and variance change with model complexity.*
-
-<!-- Alternative ASCII representation:
-```
-Error
-  ↑
-  |     ┌─ Total Error
-  |    ╱
-  |   ╱
-  |  ╱
-  | ╱
-  |╱─────── Variance
-  |        ╲
-  |         ╲
-  |          ╲─── Bias²
-  |           ╲
-  |            ╲
-  └───────────────→ Model Complexity
-    Simple          Complex
-```
--->
-
 ## Model Complexity Examples
 
 ### Low Complexity (High Bias, Low Variance)
@@ -125,10 +103,6 @@ Error
    - Helps identify optimal complexity
    - Prevents overfitting to validation set
 
-4. **More Data**
-   - Reduces variance without increasing bias
-   - Often the best solution if available
-
 ## Practical Guidelines
 
 ### For High Bias:
@@ -144,45 +118,14 @@ If train_error ≈ val_error and both are high:
 If train_error << val_error:
     → Reduce complexity
     → Add regularization
-    → Get more data
     → Use simpler model
-```
-
-## Learning Curves
-
-Plotting training and validation error vs training set size:
-
-- **High Bias**: Both curves converge to high error
-- **High Variance**: Large gap between curves, validation error decreases with more data
-
-## Code Example (Conceptual)
-
-```python
-# Diagnosing bias-variance
-train_score = model.score(X_train, y_train)
-val_score = model.score(X_val, y_val)
-
-if train_score < 0.7 and val_score < 0.7:
-    print("High Bias - Underfitting")
-    # Increase complexity
-    
-elif train_score > 0.9 and val_score < 0.7:
-    print("High Variance - Overfitting")
-    # Reduce complexity, add regularization
 ```
 
 ## Key Takeaways
 
-1. **Bias-Variance tradeoff is fundamental** to ML
-2. **Goal**: Minimize total error (bias² + variance)
-3. **Complexity matters**: Too simple = high bias, too complex = high variance
-4. **More data helps**: Reduces variance without increasing bias
-5. **Regularization balances**: Increases bias to reduce variance
-
-## References
-
-- Understanding the bias-variance decomposition
-- Model complexity and generalization
+1. **Goal**: Minimize total error (bias² + variance)
+2. **Complexity matters**: Too simple = high bias, too complex = high variance
+4. **Regularization balances**: Increases bias to reduce variance
 
 ## Image Credits
 
