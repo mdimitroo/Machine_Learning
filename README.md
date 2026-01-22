@@ -8,8 +8,8 @@ A comprehensive collection of machine learning models with detailed explanations
 - [Repository Structure](#repository-structure)
 - [Supervised Learning](#supervised-learning)
 - [Unsupervised Learning](#unsupervised-learning)
-- [Getting Started](#getting-started)
-- [Contributing](#contributing)
+- [Reinforcement Learning](#reinforcement-learning)
+- [ML Concepts & Techniques](#ml-concepts--techniques)
 
 ## Overview
 
@@ -19,69 +19,6 @@ This repository contains explanations and documentation of various machine learn
 - **Parameters**: Detailed parameter documentation
 - **Use Cases**: When to use each model
 - **Pros & Cons**: Advantages and limitations
-
-## Repository Structure
-
-```
-Machine_Learning/
-│
-├── README.md                 # This file - main overview
-├── requirements.txt          # Python dependencies
-├── .gitignore               # Git ignore file
-│
-├── supervised/              # Supervised learning models
-│   ├── README.md            # Overview of supervised learning
-│   ├── regression/          # Regression models
-│   │   ├── linear_regression/
-│   │   ├── polynomial_regression/
-│   │   ├── ridge_regression/
-│   │   ├── lasso_regression/
-│   │   └── random_forest_regression/
-│   │
-│   └── classification/      # Classification models
-│       ├── logistic_regression/
-│       ├── decision_tree/
-│       ├── random_forest/
-│       ├── svm/
-│       ├── naive_bayes/
-│       ├── knn/
-│       └── neural_networks/
-│
-├── unsupervised/            # Unsupervised learning models
-│   ├── README.md            # Overview of unsupervised learning
-│   ├── clustering/          # Clustering algorithms
-│   │   ├── kmeans/
-│   │   ├── hierarchical_clustering/
-│   │   ├── dbscan/
-│   │   └── gaussian_mixture/
-│   │
-│   └── dimensionality_reduction/  # Dimensionality reduction
-│       ├── pca/
-│       ├── t_sne/
-│       └── autoencoders/
-│
-├── concepts/                # ML concepts & techniques
-│   ├── README.md            # Overview of concepts
-│   ├── preprocessing/       # Data preprocessing techniques
-│   ├── regularization/     # Regularization methods
-│   ├── evaluation/          # Model evaluation techniques
-│   ├── optimization/        # Optimization algorithms
-│   ├── feature_engineering/ # Feature engineering methods
-│   ├── hyperparameter_tuning/ # Hyperparameter tuning
-│   ├── ensemble_methods/    # Ensemble techniques
-│   ├── loss_functions/      # Loss functions
-│   ├── overfitting_underfitting/ # Model complexity
-│   └── data_imbalance/      # Handling imbalanced data
-│
-├── data/                    # Sample datasets
-│   └── README.md            # Dataset descriptions
-│
-└── utils/                   # Utility functions
-    ├── __init__.py
-    ├── data_preprocessing.py
-    └── visualization.py
-```
-
 ## Supervised Learning
 
 Models that learn from labeled training data.
@@ -116,6 +53,31 @@ Models that find patterns in unlabeled data.
 - **Principal Component Analysis (PCA)**: Reducing dimensions while preserving variance
 - **t-SNE**: Non-linear dimensionality reduction for visualization
 - **Autoencoders**: Neural networks for feature extraction
+
+## Reinforcement Learning
+
+Models that learn optimal actions through interaction with an environment to maximize cumulative reward.
+
+### Value-Based Algorithms
+- **Q-Learning**: Off-policy value-based algorithm using Q-function
+- **Deep Q-Network (DQN)**: Q-learning with deep neural networks
+- **Double DQN**: Addresses overestimation bias in DQN
+- **Dueling DQN**: Separates value and advantage estimation
+
+### Policy-Based Algorithms
+- **REINFORCE**: Monte Carlo policy gradient method
+- **Policy Gradient**: Direct policy optimization using gradients
+- **Natural Policy Gradient**: Uses natural gradient for policy updates
+
+### Actor-Critic Algorithms
+- **Actor-Critic**: Combines value function and policy learning
+- **Proximal Policy Optimization (PPO)**: Stable policy optimization with clipping
+- **Soft Actor-Critic (SAC)**: Off-policy maximum entropy RL
+- **Deep Deterministic Policy Gradient (DDPG)**: Continuous action spaces
+
+### Model-Based Algorithms
+- **Dyna-Q**: Combines Q-learning with environment model
+- **Model Predictive Control (MPC)**: Uses learned model for planning
 
 ## ML Concepts & Techniques
 

@@ -27,13 +27,13 @@ Where:
 
 ### When to Use
 
-✅ **Good for:**
+**Good for:**
 - Neural networks
 - K-Nearest Neighbors (KNN)
 - Algorithms that require features in [0, 1] range
 - When you know the bounds of your data
 
-❌ **Not ideal for:**
+**Not ideal for:**
 - When data has outliers (they can skew the scaling)
 - When you don't know the bounds of future data
 
